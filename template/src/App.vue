@@ -1,7 +1,6 @@
 <template>
   <div id="main">
-    <img src="./assets/vuelogo.png">
-    <img src="./assets/neutroniumlogo.png">
+    <img src="./assets/logo.png">
     <h1>{{ viewModel.message }}</h1>
     <h1>{{ msg }}</h1>
   </div>
