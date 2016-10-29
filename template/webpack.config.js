@@ -1,0 +1,99 @@
+var path = require('path')
+var webpack = require('webpack')
+var utils = require('./utils')
+
+var output={
+    path: path.resolve(__dirname, './dist'),
+    filename: 'build.js'
+};
+
+if (process.env.NODE_ENV !== 'production') {
+  output.publicPath='dist/'
+}
+
+var webpackOptions = {
+  output: output,
+  module: {
+    rules: [
+      {
+        test: /\.vue$/,
+        loader: 'vue',
+        options: {
+          loaders: utils.cssLoaders(),
+          postcss: [
+            require('autoprefixer')({
+              browsers: ['last 2 versions']
+            })
+          ]
+        }
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader?limit=10000'
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader?limit=10000'
+      },
+      { 
+        test: /\.json$/, 
+        loader: 'json' 
+      },
+      {
+        test: /\.html$/,
+        loader: 'vue-html-loader'
+      }
+    ]
+  },
+  devServer: {
+    historyApiFallback: true,
+    noInfo: true
+  },
+  resolve: {
+    extensions: ['.js', '.vue', '.json', '.css'],
+    alias: {
+      'src': path.resolve(__dirname, '../src'),
+      'assets': path.resolve(__dirname, '../src/assets'),
+      'components': path.resolve(__dirname, '../src/components')
+    }
+  },
+  devtool: 'source-map',
+}
+
+
+if (process.env.NODE_ENV === 'production') {
+  webpackOptions.externals={
+    'vue' : 'Vue'
+  }
+  webpackOptions.entry= './src/entry.js';
+
+  webpackOptions.devtool = '#source-map'
+  // http://vue-loader.vuejs.org/en/workflow/production.html
+  webpackOptions.plugins = (module.exports.plugins || []).concat([
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true
+    })
+  ])
+} else {
+    webpackOptions.resolve.alias= {
+      'vue$': 'vue/dist/vue'
+    }
+    webpackOptions.entry= './src/main.js';
+}
+
+module.exports = webpackOptions
