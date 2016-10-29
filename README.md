@@ -1,10 +1,12 @@
-# neutronium view template
+# neutronium vue template
+<p align="center"><img width="100"src="https://raw.githubusercontent.com/David-Desmaisons/neutronium-vue/master/template/src/assets/logo.png"></p>
+
 
 > A simple Vue 2.0 Neutronium vue-cli template using Webpack. 
 
 ### Usage
 
-This is a project template for [vue-cli](https://github.com/vuejs/vue-cli).
+This is a project template for [vue-cli](https://github.com/vuejs/vue-cli) for starting [Neutronium](https://github.com/David-Desmaisons/Neutronium) project
 
 ``` bash
 $ npm install -g vue-cli
@@ -16,9 +18,9 @@ $ npm run dev
 
 ### What's Included
 
-- `npm run dev`: Webpack + `vue-loader` with proper config for source maps & hot-reload for developing using webbrowser
+- `npm run dev`: Webpack + `vue-loader` with proper config for source maps & hot-reload for developing using web browser.
 
-- `npm run build_debug`: build for neutronium usage with HTML/CSS/JS minification using source maps. Just include the generated `dist\build.js` and `dist\index.htnl` in the neutronium project
+- `npm run build_debug`: build for neutronium usage with HTML/CSS/JS minification using source maps. Just reference the generated `dist\build.js` and `dist\index.htnl` in the neutronium project.
 
 - `npm run build_prod`: Same as  `npm run build_debug` without map sources.
 
