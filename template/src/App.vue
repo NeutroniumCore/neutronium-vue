@@ -1,8 +1,7 @@
 <template>
   <div id="main">
     <img src="./assets/logo.png">
-    <h1>{{ viewModel.message }}</h1>
-    <h1>{{ msg }}</h1>
+    <h1>{{ message }}</h1>
   </div>
 </template>
 
@@ -16,7 +15,7 @@ export default {
   props,
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      this.viewModel
     }
   }
 }
