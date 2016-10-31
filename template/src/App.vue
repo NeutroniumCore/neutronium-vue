@@ -1,5 +1,5 @@
 <template>
-  <div id="main">
+  <div>
     <img src="./assets/logo.png">
     <h1>\{{ msg }}</h1>
     <h2>Related Links</h2>
