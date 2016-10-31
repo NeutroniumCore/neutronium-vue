@@ -14,9 +14,7 @@ export default {
   name: 'app',
   props,
   data () {
-    return {
-      this.viewModel
-    }
+    return this.viewModel
   }
 }
 </script>
