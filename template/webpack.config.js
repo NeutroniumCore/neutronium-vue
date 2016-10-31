@@ -1,14 +1,20 @@
 var path = require('path')
 var webpack = require('webpack')
 var utils = require('./utils')
+var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 var output={
     path: path.resolve(__dirname, './dist'),
     filename: 'build.js'
 };
 
+var cssOptionLoader;
+
 if (process.env.NODE_ENV !== 'production') {
+  cssOptionLoader = { sourceMap: false }
   output.publicPath='dist/'
+} else {
+  cssOptionLoader = { sourceMap: true, extract: true }
 }
 
 var webpackOptions = {
@@ -19,13 +25,34 @@ var webpackOptions = {
         test: /\.vue$/,
         loader: 'vue',
         options: {
-          loaders: utils.cssLoaders(),
+          loaders: utils.cssLoaders(cssOptionLoader),
           postcss: [
             require('autoprefixer')({
               browsers: ['last 2 versions']
             })
           ]
         }
+      },
+      { 
+        test: /\.css$/, 
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: "style-loader",
+          loader: ["css"]
+        }) 
+      },
+      {
+        test: [/\.scss$/ , /\.sass$/],
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: "style-loader",
+          loader:  [ 'css?sourceMap', 'less?sourceMap' ]
+        })
+      },
+      {
+        test: /\.less$/,
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: "style-loader",
+          loader: ['css?sourceMap', 'sass?sourceMap' ]
+        })
       },
       {
         test: /\.js$/,
@@ -62,6 +89,9 @@ var webpackOptions = {
       'components': path.resolve(__dirname, '../src/components')
     }
   },
+  plugins: [
+    new ExtractTextPlugin('styles.css')
+  ],
   devtool: 'source-map',
 }
 
@@ -74,7 +104,7 @@ if (process.env.NODE_ENV === 'production') {
 
   webpackOptions.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
-  webpackOptions.plugins = (module.exports.plugins || []).concat([
+  webpackOptions.plugins = (webpackOptions.plugins || []).concat([
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
@@ -90,10 +120,13 @@ if (process.env.NODE_ENV === 'production') {
     })
   ])
 } else {
-    webpackOptions.resolve.alias= {
-      'vue$': 'vue/dist/vue'
-    }
-    webpackOptions.entry= './src/main.js';
-}
+  webpackOptions.plugins = (webpackOptions.plugins || []).concat([
+    new webpack.HotModuleReplacementPlugin()
+  ]);
 
+  webpackOptions.resolve.alias= {
+    'vue$': 'vue/dist/vue'
+  }
+  webpackOptions.entry= './src/main.js';
+}
 module.exports = webpackOptions

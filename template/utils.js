@@ -1,13 +1,6 @@
 var path = require('path')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-// exports.assetsPath = function (_path) {
-//   var assetsSubDirectory = process.env.NODE_ENV === 'production'
-//     ? config.build.assetsSubDirectory
-//     : config.dev.assetsSubDirectory
-//   return path.posix.join(assetsSubDirectory, _path)
-// }
-
 exports.cssLoaders = function (options) {
   options = options || {}
   // generate loader string to be used with extract text plugin
@@ -25,7 +18,7 @@ exports.cssLoaders = function (options) {
     }).join('!')
 
     if (options.extract) {
-      return ExtractTextPlugin.extract('vue-style-loader', sourceLoader)
+      return ExtractTextPlugin.extract({fallbackLoader: 'vue-style-loader', loader: sourceLoader})
     } else {
       return ['vue-style-loader', sourceLoader].join('!')
     }
