@@ -1,7 +1,7 @@
 <template>
   <div id="main">
     <img src="./assets/logo.png">
-    <h1>{{ message }}</h1>
+    <h1>\{{ msg }}</h1>
   </div>
 </template>
 
@@ -27,6 +27,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+img {
+  height: 300px;
 }
 
 h1, h2 {
