@@ -20,9 +20,7 @@ $ npm run dev
 
 - `npm run dev`: Webpack + `vue-loader` with proper config for source maps & hot-reload for developing using web browser.
 
-- `npm run build_debug`: build for neutronium usage with HTML/CSS/JS minification using source maps. Just reference the generated `dist\build.js` and `dist\index.htnl` in the neutronium project.
-
-- `npm run build_prod`: Same as  `npm run build_debug` without map sources.
+- `npm run build`: build for neutronium usage with HTML/CSS/JS minification. Just reference the generated `dist\build.js` and `dist\index.htnl` in the neutronium project.
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader). Also check out the [breaking changes in vue-loader@9.0.0](https://github.com/vuejs/vue-loader/releases/tag/v9.0.0).
 
