@@ -4,11 +4,11 @@
     <h1>\{{ msg }}</h1>
     <h2>Related Links</h2>
     <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Vue Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Vue Forum</a></li>
-      <li><a href="https://github.com/David-Desmaisons/Neutronium" target="_blank">Neutronium</a></li>
-      <li><a href="https://github.com/David-Desmaisons/neutronium-vue" target="_blank">Neutronium Vue template</a></li>
-      <li><a href="https://github.com/David-Desmaisons/NeutoniumDemo" target="_blank">Neutronium Vue application demo</a></li>
+      <li><a href="https://vuejs.org">Core Vue Docs</a></li>
+      <li><a href="https://forum.vuejs.org">Vue Forum</a></li>
+      <li><a href="https://github.com/David-Desmaisons/Neutronium">Neutronium</a></li>
+      <li><a href="https://github.com/David-Desmaisons/neutronium-vue">Neutronium Vue template</a></li>
+      <li><a href="https://github.com/David-Desmaisons/NeutoniumDemo">Neutronium Vue application demo</a></li>
     </ul>
   </div>
 </template>
