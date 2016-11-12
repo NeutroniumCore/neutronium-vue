@@ -18,11 +18,14 @@ $ npm run dev
 
 ### What's Included
 
-- `npm run dev`: Webpack + `vue-loader` with proper config for source maps & hot-reload for developing using web browser.
+- `npm run dev`: Webpack + `vue-loader` with proper config for source maps & hot-reload for developing using web browser. Use data.json file to provide viewmodel data to your application.
 
-- `npm run build`: build for neutronium usage with HTML/CSS/JS minification. Just reference the generated `dist\build.js` and `dist\index.htnl` in the neutronium project.
+- `npm run build`: build for neutronium usage with HTML/CSS/JS minification. Just reference the generated `dist\build.js` and `dist\index.html` in the neutronium project.
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader). Also check out the [breaking changes in vue-loader@9.0.0](https://github.com/vuejs/vue-loader/releases/tag/v9.0.0).
+
+###See Neutronium wiki for more explanation
+[Build large project with Vue.js and Webpack
+](https://github.com/David-Desmaisons/Neutronium/wiki/Build-large-project-with-Vue.js-and-Webpack)
 
 ### Fork It And Make Your Own
 
