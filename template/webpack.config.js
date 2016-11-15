@@ -23,7 +23,7 @@ var webpackOptions = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue',
+        loader: 'vue-loader',
         options: {
           loaders: utils.cssLoaders(cssOptionLoader),
           postcss: [
@@ -56,7 +56,7 @@ var webpackOptions = {
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
@@ -69,7 +69,7 @@ var webpackOptions = {
       },
       { 
         test: /\.json$/, 
-        loader: 'json' 
+        loader: 'json-loader' 
       },
       {
         test: /\.html$/,
