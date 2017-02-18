@@ -36,22 +36,22 @@ var webpackOptions = {
       { 
         test: /\.css$/, 
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: "style-loader",
-          loader: ["css"]
+          fallback: "style-loader",
+          use: ["css"]
         }) 
       },
       {
         test: [/\.scss$/ , /\.sass$/],
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: "style-loader",
-          loader:  [ 'css?sourceMap', 'less?sourceMap' ]
+          fallback: "style-loader",
+          use:  [ 'css?sourceMap', 'less?sourceMap' ]
         })
       },
       {
         test: /\.less$/,
         loader: ExtractTextPlugin.extract({
-          fallbackLoader: "style-loader",
-          loader: ['css?sourceMap', 'sass?sourceMap' ]
+          fallback: "style-loader",
+          use: ['css?sourceMap', 'sass?sourceMap' ]
         })
       },
       {
