@@ -110,6 +110,6 @@ if (process.env.NODE_ENV === 'production') {
   webpackOptions.entry= './src/main.js';
 }
 const styleOption = buildMode? { sourceMap: true, extract: true } : { sourceMap: true};
-webpackOptions.module.rules = webpackOptions.module.rules.concat(utils.styleLoaders(styleOption}))
+webpackOptions.module.rules = webpackOptions.module.rules.concat(utils.styleLoaders(styleOption))
 
 module.exports = webpackOptions
