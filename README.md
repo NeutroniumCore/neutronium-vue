@@ -10,7 +10,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli) for s
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init NeutroniumCore/neutronium-vue my-project
+$ vue init NeutroniumCore/neutronium-vue#v2.4.0 my-project
 $ cd my-project
 $ npm install
 $ npm run dev
