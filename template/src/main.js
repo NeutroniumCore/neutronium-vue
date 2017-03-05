@@ -1,11 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
-import data from '../data/data'
+import rawVm from '../data/vm'
+import CircularJson from 'circular-json'
+
+const vm = CircularJson.parse(rawVm);
 
 new Vue({
 	components:{
 		App
 	},
   el: '#main',
-  data
+  data: vm
 })
