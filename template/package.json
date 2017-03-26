@@ -9,7 +9,7 @@
   },
  "dependencies": {
     "neutronium-vue-command-mixin": "^1.1.0",
-    "vue": "^2.2.1"
+    "vue": "^2.2.5"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
