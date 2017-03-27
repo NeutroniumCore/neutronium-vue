@@ -37,7 +37,7 @@ For `0.4.0` use:
 $ vue init NeutroniumCore/neutronium-vue#v2.4.0 my-project
 ```
 
-###See Neutronium wiki for more explanation
+### See Neutronium wiki for more explanation
 [Build large project with Vue.js and Webpack
 ](https://github.com/NeutroniumCore/Neutronium/wiki/Build-large-project-with-Vue.js-and-Webpack)
 
