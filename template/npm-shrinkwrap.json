@@ -1952,6 +1952,11 @@
       "from": "neutronium-vue-command-mixin@>=1.1.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/neutronium-vue-command-mixin/-/neutronium-vue-command-mixin-1.1.0.tgz"
     },
+    "neutronium-vue-simple-command-mixin": {
+      "version": "1.0.0",
+      "from": "neutronium-vue-simple-command-mixin@>=1.0.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/neutronium-vue-simple-command-mixin/-/neutronium-vue-simple-command-mixin-1.0.0.tgz"
+    },
     "node-gyp": {
       "version": "3.5.0",
       "from": "node-gyp@>=3.3.1 <4.0.0",
