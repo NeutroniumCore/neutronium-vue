@@ -16,6 +16,8 @@ $ npm install
 $ npm run dev
 ```
 
+[See here](https://github.com/NeutroniumCore/Neutronium/blob/master/Documentation/Content/Build_large_project_with_Vue.js_and_Webpack.md) for complete instruction.
+
 ### What's Included
 
 - `npm run dev`: Webpack + `vue-loader` with proper config for source maps & hot-reload for developing using web browser. Use data.json file to provide viewmodel data to your application.
@@ -31,7 +33,7 @@ Each versions is specific to a version of Neutronium.JavascriptFramework.Vue.
 
 For `0.5.0` use:
 ``` bash
-$ vue init NeutroniumCore/neutronium-vue#v3.1.0 my-project
+$ vue init NeutroniumCore/neutronium-vue#v3.2.0 my-project
 ```
 
 For `0.4.0` use:
