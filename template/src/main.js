@@ -4,7 +4,16 @@ import rawVm from '../data/vm'
 import CircularJson from 'circular-json'
 import {install} from './install'
 
-const vm = CircularJson.parse(rawVm);
+function updateVm(vm) {
+    var window = vm.__window__
+    if (window) {
+        delete vm.__window__
+        return { ViewModel: vm, Window: window }
+    }
+    return vm;
+}
+
+const vm = updateVm(CircularJson.parse(rawVm));
 
 install(Vue)
 new Vue({
