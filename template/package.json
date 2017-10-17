@@ -9,6 +9,7 @@
   },
  "dependencies": {
     "neutronium-vue-command-mixin": "^1.4.1",
+    "neutronium-vue-simple-command-mixin": "^1.1.0",
     "vue": "^2.5.2"
   },
   "devDependencies": {
