@@ -15,11 +15,11 @@ function updateVm(vm) {
 
 const vm = updateVm(CircularJson.parse(rawVm));
 
-const vueRootInstanceOption = Object.assign({}, vueInstanceOption || {}, {
+install(Vue)
+const vueRootInstanceOption = Object.assign({}, vueInstanceOption() || {}, {
     components: {
         App
     },
     data: vm
 });
-install(Vue)
 new Vue(vueRootInstanceOption).$mount('#main')

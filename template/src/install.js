@@ -1,4 +1,4 @@
-function install(vue) {
+function install(Vue) {
     //Call vue use here if needed
 }
 
