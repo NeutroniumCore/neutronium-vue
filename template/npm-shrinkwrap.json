@@ -1,5 +1,5 @@
 {
-  "name": "my-view",
+  "name": "main",
   "dependencies": {
     "abbrev": {
       "version": "1.1.1",
@@ -667,6 +667,11 @@
       "version": "1.0.30000746",
       "from": "caniuse-db@>=1.0.30000634 <2.0.0",
       "resolved": "https://registry.npmjs.org/caniuse-db/-/caniuse-db-1.0.30000746.tgz"
+    },
+    "caniuse-lite": {
+      "version": "1.0.30000749",
+      "from": "caniuse-lite@>=1.0.30000744 <2.0.0",
+      "resolved": "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30000749.tgz"
     },
     "caseless": {
       "version": "0.12.0",
@@ -1504,6 +1509,23 @@
       "from": "image-size@>=0.5.0 <0.6.0",
       "resolved": "https://registry.npmjs.org/image-size/-/image-size-0.5.5.tgz"
     },
+    "import-local": {
+      "version": "0.1.1",
+      "from": "import-local@>=0.1.1 <0.2.0",
+      "resolved": "https://registry.npmjs.org/import-local/-/import-local-0.1.1.tgz",
+      "dependencies": {
+        "find-up": {
+          "version": "2.1.0",
+          "from": "find-up@>=2.1.0 <3.0.0",
+          "resolved": "https://registry.npmjs.org/find-up/-/find-up-2.1.0.tgz"
+        },
+        "pkg-dir": {
+          "version": "2.0.0",
+          "from": "pkg-dir@>=2.0.0 <3.0.0",
+          "resolved": "https://registry.npmjs.org/pkg-dir/-/pkg-dir-2.0.0.tgz"
+        }
+      }
+    },
     "in-publish": {
       "version": "2.0.0",
       "from": "in-publish@>=2.0.0 <3.0.0",
@@ -1828,6 +1850,18 @@
       "version": "0.2.17",
       "from": "loader-utils@>=0.2.16 <0.3.0",
       "resolved": "https://registry.npmjs.org/loader-utils/-/loader-utils-0.2.17.tgz"
+    },
+    "locate-path": {
+      "version": "2.0.0",
+      "from": "locate-path@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/locate-path/-/locate-path-2.0.0.tgz",
+      "dependencies": {
+        "path-exists": {
+          "version": "3.0.0",
+          "from": "path-exists@>=3.0.0 <4.0.0",
+          "resolved": "https://registry.npmjs.org/path-exists/-/path-exists-3.0.0.tgz"
+        }
+      }
     },
     "lodash": {
       "version": "4.17.4",
@@ -2178,6 +2212,16 @@
       "version": "0.1.4",
       "from": "osenv@>=0.0.0 <1.0.0",
       "resolved": "https://registry.npmjs.org/osenv/-/osenv-0.1.4.tgz"
+    },
+    "p-limit": {
+      "version": "1.1.0",
+      "from": "p-limit@>=1.1.0 <2.0.0",
+      "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-1.1.0.tgz"
+    },
+    "p-locate": {
+      "version": "2.0.0",
+      "from": "p-locate@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/p-locate/-/p-locate-2.0.0.tgz"
     },
     "p-map": {
       "version": "1.2.0",
@@ -2863,6 +2907,16 @@
       "version": "1.4.0",
       "from": "resolve@>=1.4.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.4.0.tgz"
+    },
+    "resolve-cwd": {
+      "version": "2.0.0",
+      "from": "resolve-cwd@>=2.0.0 <3.0.0",
+      "resolved": "https://registry.npmjs.org/resolve-cwd/-/resolve-cwd-2.0.0.tgz"
+    },
+    "resolve-from": {
+      "version": "3.0.0",
+      "from": "resolve-from@>=3.0.0 <4.0.0",
+      "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-3.0.0.tgz"
     },
     "right-align": {
       "version": "0.1.3",
