@@ -30,7 +30,7 @@ $ npm run dev
 ### Important
 
 Each versions is specific to a version of Neutronium.JavascriptFramework.Vue.
-Version 4.1.1 is compatible with last Neutroniumversion: 1.0.0
+Version 4.1.1 is compatible with last Neutronium version: 1.0.0
 
 For `0.6.0` use:
 ``` bash
