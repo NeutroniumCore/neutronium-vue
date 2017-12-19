@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import rawVm from '../data/vm'
 import {install, vueInstanceOption} from './install'
-import {createVM} from '../infra/createVM'
+import { createVM } from 'neutronium-vm-loader'
 
 const vm = createVM(rawVm);
 

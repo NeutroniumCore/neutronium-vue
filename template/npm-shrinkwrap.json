@@ -2062,6 +2062,11 @@
       "from": "neutronium-main-window@>=2.0.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/neutronium-main-window/-/neutronium-main-window-2.0.0.tgz"
     },
+    "neutronium-vm-loader": {
+      "version": "1.0.2",
+      "from": "neutronium-vm-loader@latest",
+      "resolved": "https://registry.npmjs.org/neutronium-vm-loader/-/neutronium-vm-loader-1.0.2.tgz"
+    },
     "neutronium-vue-command-mixin": {
       "version": "1.5.0",
       "from": "neutronium-vue-command-mixin@>=1.4.1 <2.0.0",
