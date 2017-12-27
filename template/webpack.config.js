@@ -2,17 +2,20 @@ var path = require('path')
 var webpack = require('webpack')
 var utils = require('./utils')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
+const BabiliPlugin = require("babili-webpack-plugin")
 
-var output={
-    path: path.resolve(__dirname, './dist'),
-    filename: 'build.js'
+var output = {
+  path: path.resolve(__dirname, './dist'),
+  filename: 'build.js'
 };
+
+var resolve = (p) => path.resolve(__dirname, p);
 
 var cssOptionLoader;
 
 if (process.env.NODE_ENV !== 'production') {
   cssOptionLoader = { sourceMap: false }
-  output.publicPath='dist/'
+  output.publicPath = 'dist/'
 } else {
   cssOptionLoader = { sourceMap: true, extract: true }
 }
@@ -46,9 +49,9 @@ var webpackOptions = {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader?limit=10000'
       },
-      { 
-        test: /\.json$/, 
-        loader: 'json-loader' 
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       },
       {
         test: /\.cjson$/,
@@ -57,6 +60,12 @@ var webpackOptions = {
       {
         test: /\.html$/,
         loader: 'vue-html-loader'
+      },
+      {
+        test: /\.styl$/,
+        loader: ['style-loader', 'css-loader', 'stylus-loader', {
+          loader: 'vuetify-loader'
+        }]
       }
     ]
   },
@@ -80,14 +89,14 @@ var webpackOptions = {
 
 var buildMode = false;
 if (process.env.NODE_ENV === 'production') {
-  buildMode=true
-  webpackOptions.externals={
-    'vue' : 'Vue',
-    'vueHelper' : 'glueHelper'
+  buildMode = true
+  webpackOptions.externals = {
+    'vue': 'Vue',
+    'vueHelper': 'glueHelper'
   }
-  webpackOptions.entry= './src/entry.js';
+  webpackOptions.entry = './src/entry.js';
 
-  webpackOptions.devtool = '#source-map'
+  webpackOptions.devtool = '#cheap-source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   webpackOptions.plugins = (webpackOptions.plugins || []).concat([
     new webpack.DefinePlugin({
@@ -95,11 +104,8 @@ if (process.env.NODE_ENV === 'production') {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new BabiliPlugin({}, { comments: false }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
     })
@@ -109,12 +115,12 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.HotModuleReplacementPlugin()
   ]);
 
-  webpackOptions.resolve.alias= {
+  webpackOptions.resolve.alias = {
     'vue$': 'vue/dist/vue'
   }
-  webpackOptions.entry= './src/main.js';
+  webpackOptions.entry = './src/main.js';
 }
-const styleOption = buildMode? { sourceMap: true, extract: true } : { sourceMap: true};
+const styleOption = buildMode ? { sourceMap: true, extract: true } : { sourceMap: true };
 webpackOptions.module.rules = webpackOptions.module.rules.concat(utils.styleLoaders(styleOption))
 
 module.exports = webpackOptions
