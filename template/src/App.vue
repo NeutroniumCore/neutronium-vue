@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <img src="./assets/logo.png">
     <h1>{{ msg }}</h1>
     <h2>Related Links</h2>
@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style>
-#main {
+.app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
