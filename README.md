@@ -10,7 +10,7 @@ This is a project template for [vue-cli](https://github.com/vuejs/vue-cli) for s
 
 ``` bash
 $ npm install -g vue-cli
-$ vue init NeutroniumCore/neutronium-vue#v6.1.0 my-view
+$ vue init NeutroniumCore/neutronium-vue#v6.2.0 my-view
 $ cd my-view
 $ npm install
 $ npm run dev
@@ -30,7 +30,12 @@ $ npm run dev
 ### Important
 
 Each versions is specific to a version of Neutronium.JavascriptFramework.Vue.
-`Version 6.1.0` is compatible with last Neutronium version: `v1.2.0`
+`Version 6.2.0` is compatible with last Neutronium version: `v1.3.0`
+
+For `1.2.0` use:
+``` bash
+$ vue init NeutroniumCore/neutronium-vue#v6.1.0 my-project
+```
 
 For `1.1.0` use:
 ``` bash
