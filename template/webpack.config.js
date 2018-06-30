@@ -114,10 +114,6 @@ switch (process.env.NODE_ENV) {
     break;
 
   case 'development':
-    webpackOptions.plugins = (webpackOptions.plugins || []).concat([
-      new webpack.HotModuleReplacementPlugin()
-    ]);
-
     webpackOptions.resolve.alias = {
       'vue$': 'vue/dist/vue'
     }
@@ -125,10 +121,6 @@ switch (process.env.NODE_ENV) {
     break;
 
   case 'integrated':
-    webpackOptions.plugins = (webpackOptions.plugins || []).concat([
-      new webpack.HotModuleReplacementPlugin()
-    ]);
-
     webpackOptions.externals = {
       'vue': 'Vue',
       'vueHelper': 'glueHelper'
