@@ -4,6 +4,11 @@
 
 > A simple Vue 2.0 Neutronium vue-cli template using Webpack. 
 
+# Vue-cli 3 is here, so this template is now considered deprecated.
+
+
+Please use vue-cli 3 plugin:  [vue-cli-plugin-neutronium](https://github.com/NeutroniumCore/vue-cli-plugin-neutronium)
+
 ### Usage
 
 This is a project template for [vue-cli](https://github.com/vuejs/vue-cli) for starting [Neutronium](https://github.com/NeutroniumCore/Neutronium) project
